@@ -1,1 +1,355 @@
 /* You can add global styles to this file, and also import other style files */
+/* GLOBAL */
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* LAYOUT */
+.layout{
+  position: relative;
+  padding-top: 120px;
+  padding-left: 345px;
+  background: #FAFBFC;
+
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.layoutWrapper{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+
+
+/* TopBar */
+.topBar{
+  position: absolute;
+  top: 0;
+  left: 345px;
+
+  height: 120px;
+  width: calc(100% - 345px);
+
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+
+  background-color: white;
+}
+
+
+/* SideBar */
+.sidebar{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 50px;
+
+  background-color: white;
+
+  width: 345px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+
+/*SIDE BAR BUTTON*/
+.sideBarButton{
+  width: 100%;
+  height: 54px;
+  border-radius: 16px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.sideBarButton .wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sideBarButton .buttonText{
+  color: #737791;
+  font-size: 18px;
+}
+
+.sideBarButton:hover .buttonText{
+  color: black;
+}
+
+.active{
+  background-color: #5D5FEF;
+}
+
+.active .buttonText{
+  color: white;
+  font-weight: 500;
+}
+
+.active:hover .buttonText{
+  color: lightgray;
+}
+
+
+/* NavTitle */
+.navTitle{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.navTitle h1{
+  font-size: 30px;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.navSvg{
+  width: 56px;
+  height: 56px;
+}
+
+
+/* SvgView */
+.svgContainer{
+  height: fit-content;
+  width: fit-content;
+}
+
+
+/* SvgIcon */
+.svgIconSearchLine {
+  fill: #5D5FEF;
+  width: 20px;
+  height: 20px;
+}
+
+/* ChartTitle */
+.chartTitle{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+
+/* BarChart */
+.barChart{
+  height: 350px;
+  width: 650px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+}
+
+.barChart .graphContainer{
+  position: relative;
+  padding-top: 15px;
+}
+
+
+/* BarChartBackground */
+.barchartBackground{
+  position: relative;
+  width: 100%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.barchartBackground span{
+  width: 92%;
+  display: block;
+  height: 1px;
+  background-color: #EFF1F3;
+}
+
+.barchartBackground div{
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #7B91B0;
+  justify-content: space-between;
+}
+
+
+/* ChartBars */
+.chartBars{
+  position: absolute;
+  max-width: 542px;
+  height: 100%;
+  top: 0;
+  left: 48px;
+  padding: 0 0 10px 17px;
+  display: flex;
+  align-items: flex-end;
+  gap: 17px;
+  overflow: hidden;
+}
+
+
+/* SingleBars */
+.singleBarContainer{
+  cursor: pointer;
+  position: relative;
+}
+
+.singleBarContainer .tooltip{
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  top: 0;
+  color: #FA5A7D;
+}
+
+.singleBarContainer:hover .tooltip{
+  display: block;
+}
+
+.singleBarContainer:hover .singleBar{
+  background-color: #FA5A7D;
+}
+
+.singleBar{
+  width: 30px;
+  background-color: #5D5FEF;
+  border-radius: 5px;
+}
+
+
+/* DashboardWidgets */
+.dashboardWidgets{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-content: flex-start;
+}
+
+
+/* SalesWidget */
+.salesWidget{
+  width: fit-content;
+  height: 350px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+}
+
+.widgetsContainer{
+  display: flex;
+  height: 245px;
+  position: relative;
+  gap: 30px;
+  align-items: center;
+}
+
+
+
+
+
+/* WidgetCard */
+.widgetCard{
+  height: 200px;
+  width: 200px;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.widgetCardValue{
+  margin: 10px 0 0;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.widgetCard .textContainer{
+  padding-left: 5px;
+}
+
+.widgetCard .additionalInfo{
+  color: #4079ED;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 3px;
+}
+
+.valueName{
+  color: #425166;
+  font-size: 16px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.widgetCardIcon{
+  width: 45px;
+  height: 45px;
+}
+
+
+/* SearchLine */
+.searchLineContainer{
+  margin-left: 200px;
+  width: 500px;
+  height: 60px;
+  position: relative;
+}
+
+.searchLineContainer input{
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-color: #F9FAFB;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px 0 55px;
+}
+
+.magnifyingContainer{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.magnifying{
+  fill: #5D5FEF;
+  width: 24px;
+  height: 24px;
+}
+
+/* Mock */
+.mock{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  font-size: 32px;
+  font-weight: 500;
+}
